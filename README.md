@@ -5,7 +5,7 @@ To create a new directory from this template, just click "Use this template" in 
 
 # Running
 To run this, make sure you have Node.js installed.  
-In a terminal with the directory open, type `npm i` to install dependencies. Note you only have to do this the first time you run.  
+In a terminal with the directory open, type `npm ci` to install dependencies. Note you only have to do this the first time you run.  
 Then, type `npm start` (you have to do this each time you run)
 
 # Deploying
