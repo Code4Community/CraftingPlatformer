@@ -3,6 +3,12 @@ Level
 - Load from file
 
 Entity
-- Subclasses: player, enemy, item, ...
+- Subclasses: 
+    player
+    item:
+        ...
+    block?:
+        craftingtable
+        ...
 
 InteractionManager
