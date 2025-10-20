@@ -2,6 +2,8 @@ import character from '../assets/character.png';
 import background from '../assets/background.jpg';
 import C4C from 'c4c-lib';
 import { gameLoopSpeed } from '..';
+import Level from '../level';
+import level0JSON from '../assets/levels/level0.json';
 
 export default class Scene1 extends Phaser.Scene {
     constructor() {
@@ -18,7 +20,7 @@ export default class Scene1 extends Phaser.Scene {
     create() {
         // This is where you set up your scene
         // Add the background image to the center of the screen and make it the size of the screen
-        this.add.image(400, 300, 'background').setDisplaySize(800, 600);
+        this.add.image(400, 300, 'background').setDisplaySize(80, 60);
 
         // Add the character image to the center of the screen
         // Save a reference to the character
@@ -69,6 +71,12 @@ export default class Scene1 extends Phaser.Scene {
 
         // This scene enables the runCode button
         document.getElementById('run-code').removeAttribute('disabled');
+
+        this.entities = new Level(level0JSON).getLevelEntities();
+
+        this.entities.forEach(entity => {
+            entity.initialize(this);
+        });
     }
 
     update() {
