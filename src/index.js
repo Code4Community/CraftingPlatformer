@@ -35,7 +35,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 300 }
+            gravity: { y: 0 }
         }
     },
     // Where the game is located (id of the DOM element)
