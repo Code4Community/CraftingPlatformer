@@ -22,11 +22,9 @@ export default class Entity{
      * @param {Phaser.Scene} scene 
      */
     initialize(scene) {
-
-    }
-
-    draw(){
-
+        scene.add.image(this.x, this.y, texture)
+            .setOrigin(0,0)
+            .setDisplaySize(this.w, this.h);
     }
 
     update(){
